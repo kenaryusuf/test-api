@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Exceptions\RoleDoesNotExist;
 use Spatie\Permission\Models\Role;
 
 class RoleSeeder extends Seeder
@@ -22,11 +23,7 @@ class RoleSeeder extends Seeder
         ];
 
         foreach ($roles as $role) {
-            if (Role::findByName($role['name'])) {
-                continue;
-            }
-
-            Role::create($role);
+            Role::findOrCreate($role['name']);
         }
     }
 }
