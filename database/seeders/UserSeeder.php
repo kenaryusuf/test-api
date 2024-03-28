@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
         $userOne = User::create([
             'name' => 'Admin',
             'surname' => 'Test',
-            'email' => 'admin@wibesoft.com',
+            'email' => 'admin@lumenapi.com',
             'password' => Hash::make('123')
         ]);
 
@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
         $userTwo = User::create([
             'name' => 'User',
             'surname' => 'Test',
-            'email' => 'user@wibesoft.com',
+            'email' => 'user@lumenapi.com',
             'password' => Hash::make('123')
         ]);
 
